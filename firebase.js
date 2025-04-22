@@ -2,7 +2,7 @@
 
 
      // Firebase Realtime Database URL (replace with your database URL)
-     const databaseURL = "https://fastnet-33ee6-default-rtdb.firebaseio.com/users.json";
+     const databaseURL = "https://fir-66196-default-rtdb.firebaseio.com/users.json";
 
      // Form submission handler
      document.getElementById('submitBtn').addEventListener('click', async (e) => {
@@ -37,14 +37,14 @@ console.log("Retrieved Selected Packages:", selectedPackages);
              });
 
              if (response.ok) {
-                alert('Data submitted successfully to Firebase!');
+                alert('Thanks For Contacting US! We will get back to you soon.');
                 console.log('Data sent to Firebase:', data);
     
                 // Clear the form and reset selectedPackages
                 document.getElementById('contactForm').reset();
                 localStorage.removeItem('selectedPackages'); // Clear localStorage
             } else {
-                alert('Failed to submit data to Firebase.');
+                alert('Server Not Responding ! Please try again later.');
                 console.error('Response status:', response.status);
                 const errorText = await response.text();
                 console.error('Response body:', errorText);
